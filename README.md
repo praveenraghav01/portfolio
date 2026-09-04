@@ -2,6 +2,16 @@
 
 DevOps Team Leader · 9 years turning manual pipelines into automated, observable platforms.
 
+[![Portfolio](https://img.shields.io/website?url=https%3A%2F%2Fpraveenraghav.com&label=portfolio&up_color=3ecf8e&down_color=inactive)](https://praveenraghav.com)
+[![Blog](https://img.shields.io/website?url=https%3A%2F%2Fblog.praveenraghav.com&label=blog&up_color=3ecf8e&down_color=inactive)](https://blog.praveenraghav.com)
+[![License: MIT](https://img.shields.io/badge/license-MIT-3ecf8e.svg)](LICENSE)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
+![No build step](https://img.shields.io/badge/build-none-informational)
+[![WordPress theme](https://img.shields.io/badge/WordPress-theme-21759B?logo=wordpress&logoColor=white)](wordpress-theme/praveen-devops-log)
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)](wordpress-theme/praveen-devops-log)
+
 **[Visit the live site →](https://praveenraghav.com)**
 **[Read the blog →](https://blog.praveenraghav.com)**
 
