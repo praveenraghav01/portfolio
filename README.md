@@ -66,4 +66,4 @@ for setup, Customizer links, ad placements, and AdSense activation.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Original design/code © Praveen Kumar.
+MIT — see [LICENSE](LICENSE) .
