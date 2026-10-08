@@ -1097,6 +1097,40 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
 .crow__go svg { width: 13px; height: 13px; transition: transform var(--dur-2) var(--ease-out); }
 .crow:hover .crow__go svg { transform: translate(2px, -2px); }
 
+/* Projects — a taller crow: name + description + chips, one or two links */
+.prow { grid-template-columns: 108px 1fr 11.5rem 4.5rem; align-items: start; padding-block: 1.3rem; }
+.prow .crow__issuer, .prow .crow__dates { padding-top: 0.3rem; }
+.prow__body {
+  display: grid; min-width: 0; column-gap: 1.8rem; row-gap: 0.55rem;
+  grid-template-columns: minmax(0, 1fr) 17rem; grid-template-rows: auto auto 1fr;
+  grid-template-areas: "name shot" "desc shot" "tags shot";
+}
+.prow__body .crow__name { grid-area: name; }
+.prow__desc { grid-area: desc; margin: 0; max-width: 62ch; color: var(--ink-muted); font-size: 0.86rem; line-height: 1.55; }
+.prow__tags { grid-area: tags; align-self: start; display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.2rem; }
+
+/* link-preview thumbnail (each site's own og:image, self-hosted) */
+.prow__shot {
+  grid-area: shot; display: block; align-self: start; overflow: hidden;
+  aspect-ratio: 1200 / 630; background: #0c0e11;
+  border: 1px solid var(--line); border-radius: var(--r);
+  transition: border-color var(--dur-3) var(--ease-out), box-shadow var(--dur-3) var(--ease-out);
+}
+.prow__shot img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-4) var(--ease-out); }
+.prow:hover .prow__shot { border-color: var(--accent-a40); box-shadow: 0 12px 32px -16px var(--accent-a40); }
+.prow:hover .prow__shot img { transform: scale(1.03); }
+/* no og:image published for the Academy — a text card built from its own title + tagline */
+.prow__shot--card {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  background: radial-gradient(120% 140% at 90% 0%, rgba(62, 207, 142, 0.16), transparent 60%), #0c0e11;
+}
+.prow__shot--card img { position: absolute; top: 1rem; left: 1.1rem; width: 44px; height: 44px; border-radius: 11px; }
+.prow__shot--card strong { color: #f4f6f8; font-size: 1.05rem; letter-spacing: -0.02em; line-height: 1.1; }
+.prow__shot--card span { color: #9aa3ad; font-size: 0.72rem; line-height: 1.35; }
+.prow__links { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; padding-top: 0.3rem; }
+.prow__links .crow__go:hover { color: var(--accent-bright); }
+
 .reco-grid { column-count: 2; column-gap: 1.1rem; }
 .reco-card {
   display: block; break-inside: avoid; margin: 0 0 1.1rem;
@@ -1222,6 +1256,10 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
   .crow__dates { grid-area: dates; }
   .crow__name { grid-area: name; }
   .crow__go { grid-area: go; justify-self: end; }
+  .prow { grid-template-columns: 1fr auto; grid-template-areas: "issuer dates" "body body" "links links"; row-gap: 0.7rem; }
+  .prow__body { grid-area: body; grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "shot" "name" "desc" "tags"; }
+  .prow__shot { max-width: 26rem; }
+  .prow__links { grid-area: links; flex-direction: row; justify-content: flex-start; gap: 1.4rem; padding-top: 0; }
   .edu { grid-template-columns: auto 1fr; }
   .edu__years { grid-column: 2; }
   .footer__row { flex-direction: column; text-align: center; }
